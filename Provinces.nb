@@ -1,0 +1,382 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15071,        374]
+NotebookOptionsPosition[     13850,        345]
+NotebookOutlinePosition[     14191,        360]
+CellTagsIndexPosition[     14148,        357]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{
+   RowBox[{
+   "datastring", "=", " ", 
+    "\"\<1 WESTERN_CAPE FEMALE 48\n2 FREE_STATE MALE 85\n3 GAUTENG MALE 79\n4 \
+KWAZULU-NATAL FEMALE 46\n5 KWAZULU-NATAL MALE 74\n6 KWAZULU-NATAL FEMALE 63\n\
+7 KWAZULU-NATAL FEMALE 81\n8 KWAZULU-NATAL FEMALE 80\n9 KWAZULU-NATAL MALE 80\
+\n10 WESTERN_CAPE FEMALE 82\n11 KWAZULU-NATAL MALE 86\n12 WESTERN_CAPE MALE \
+57\n13 KWAZULU-NATAL MALE 60\n14 FREE_STATE MALE 55 \n15 FREE_STATE MALE 77\n\
+16 GAUTENG MALE 49 \n17 GAUTENG MALE 52\n18 KWAZULU-NATAL MALE 70\n19 \
+KWAZULU-NATAL FEMALE 71\n20 KWAZULU-NATAL MALE 79\n21 KWAZULU-NATAL FEMALE 86\
+\n22 KWAZULU-NATAL MALE 91\n23 KWAZULU-NATAL FEMALE 73\n24 KWAZULU-NATAL \
+FEMALE 79\n25 GAUTENG MALE 50\>\""}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.7951091100762386`*^9, 3.795109162000723*^9}, {
+  3.795177494150048*^9, 3.7951775047318096`*^9}, {3.7951905405207276`*^9, 
+  3.79519055811665*^9}, {3.7953620157194157`*^9, 3.795362137942701*^9}, {
+  3.795958236085541*^9, 3.795958434594514*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"173a8a47-9291-4280-8372-94afe87ecac3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"data", " ", "=", " ", 
+  RowBox[{"ImportString", "[", 
+   RowBox[{"datastring", ",", " ", "\"\<Table\>\""}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7951091651545258`*^9, 3.795109187585331*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"8fece801-ebd2-45fb-8935-af4dfbfb5bd8"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "\<\"WESTERN_CAPE\"\>", ",", "\<\"FEMALE\"\>", ",", "48"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "\<\"FREE_STATE\"\>", ",", "\<\"MALE\"\>", ",", "85"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "\<\"GAUTENG\"\>", ",", "\<\"MALE\"\>", ",", "79"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"KWAZULU-NATAL\"\>", ",", "\<\"FEMALE\"\>", ",", "46"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5", ",", "\<\"KWAZULU-NATAL\"\>", ",", "\<\"MALE\"\>", ",", "74"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "6", ",", "\<\"KWAZULU-NATAL\"\>", ",", "\<\"FEMALE\"\>", ",", "63"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "7", ",", "\<\"KWAZULU-NATAL\"\>", ",", "\<\"FEMALE\"\>", ",", "81"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "8", ",", "\<\"KWAZULU-NATAL\"\>", ",", "\<\"FEMALE\"\>", ",", "80"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "9", ",", "\<\"KWAZULU-NATAL\"\>", ",", "\<\"MALE\"\>", ",", "80"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "10", ",", "\<\"WESTERN_CAPE\"\>", ",", "\<\"FEMALE\"\>", ",", "82"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "11", ",", "\<\"KWAZULU-NATAL\"\>", ",", "\<\"MALE\"\>", ",", "86"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "12", ",", "\<\"WESTERN_CAPE\"\>", ",", "\<\"MALE\"\>", ",", "57"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "13", ",", "\<\"KWAZULU-NATAL\"\>", ",", "\<\"MALE\"\>", ",", "60"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"14", ",", "\<\"FREE_STATE\"\>", ",", "\<\"MALE\"\>", ",", "55"}],
+     "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"15", ",", "\<\"FREE_STATE\"\>", ",", "\<\"MALE\"\>", ",", "77"}],
+     "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"16", ",", "\<\"GAUTENG\"\>", ",", "\<\"MALE\"\>", ",", "49"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"17", ",", "\<\"GAUTENG\"\>", ",", "\<\"MALE\"\>", ",", "52"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "18", ",", "\<\"KWAZULU-NATAL\"\>", ",", "\<\"MALE\"\>", ",", "70"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "19", ",", "\<\"KWAZULU-NATAL\"\>", ",", "\<\"FEMALE\"\>", ",", "71"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "20", ",", "\<\"KWAZULU-NATAL\"\>", ",", "\<\"MALE\"\>", ",", "79"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "21", ",", "\<\"KWAZULU-NATAL\"\>", ",", "\<\"FEMALE\"\>", ",", "86"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "22", ",", "\<\"KWAZULU-NATAL\"\>", ",", "\<\"MALE\"\>", ",", "91"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "23", ",", "\<\"KWAZULU-NATAL\"\>", ",", "\<\"FEMALE\"\>", ",", "73"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "24", ",", "\<\"KWAZULU-NATAL\"\>", ",", "\<\"FEMALE\"\>", ",", "79"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"25", ",", "\<\"GAUTENG\"\>", ",", "\<\"MALE\"\>", ",", "50"}], 
+    "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.795109188279614*^9, 3.795177508602433*^9, 
+  3.795190562983637*^9, 3.795362143489862*^9, 3.795958439278983*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"0285b33b-5e64-4f23-8eaf-0abbde179354"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "data", "]"}]], "Input",
+ CellChangeTimes->{{3.7951906088989277`*^9, 3.7951906311015296`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"ba30b3a1-1141-4407-90bc-3b43ff931a4c"],
+
+Cell[BoxData["25"], "Output",
+ CellChangeTimes->{3.795190632154834*^9, 3.7953621471540756`*^9, 
+  3.795958443847761*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"53fb2d36-35a2-4b64-9bd4-37cbef7b2588"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Histogram", "[", 
+  RowBox[{
+   RowBox[{"data", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", " ", "4"}], "]"}], "]"}], "\[IndentingNewLine]", ",",
+    " ", 
+   RowBox[{"Frame", "\[Rule]", "True"}], "\[IndentingNewLine]", ",", " ", 
+   RowBox[{"FrameLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Age range\>\"", ",", " ", "\"\<Number\>\""}], "}"}]}], 
+   "\[IndentingNewLine]", ",", " ", 
+   RowBox[{
+   "PlotLabel", "\[Rule]", "\"\<South Africa\\nCOVID-19 Deaths\>\""}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.7951091981656294`*^9, 3.795109198937957*^9}, {
+  3.795177454490058*^9, 3.7951774707126946`*^9}, {3.79517751626394*^9, 
+  3.7951776731096983`*^9}, {3.795362171395273*^9, 3.7953621791474986`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"ee89e8f3-9767-4689-9958-58e95972ab75"],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[0.987148, 0.8073604000000001, 0.49470040000000004`], EdgeForm[{
+    Opacity[0.6649999999999999], Thickness[Small]}], {}, 
+    {RGBColor[0.987148, 0.8073604000000001, 0.49470040000000004`], EdgeForm[{
+     Opacity[0.6649999999999999], Thickness[Small]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], 
+          RectangleBox[{40., 0}, {60., 7.}, "RoundingRadius" -> 0]},
+         ImageSizeCache->{{40.19897959183672, 
+          143.8826530612245}, {-35.989716276465415`, 97.03442902547626}}],
+        StatusArea[#, 7]& ,
+        TagBoxNote->"7"],
+       StyleBox["7", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[7, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], 
+          RectangleBox[{60., 0}, {80., 10.}, "RoundingRadius" -> 0]},
+         ImageSizeCache->{{143.3826530612245, 
+          247.0663265306122}, {-92.78577854872616, 97.03442902547626}}],
+        StatusArea[#, 10]& ,
+        TagBoxNote->"10"],
+       StyleBox["10", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[10, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], 
+          RectangleBox[{80., 0}, {100., 8.}, "RoundingRadius" -> 0]},
+         ImageSizeCache->{{246.5663265306122, 350.25}, {-54.92173703388566, 
+          97.03442902547626}}],
+        StatusArea[#, 8]& ,
+        TagBoxNote->"8"],
+       StyleBox["8", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[8, {}], "Tooltip"]& ]}, {}, {}}, {{}, {}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{38.8, 0},
+  Frame->True,
+  FrameLabel->{{
+     FormBox["\"Number\"", TraditionalForm], None}, {
+     FormBox["\"Age range\"", TraditionalForm], None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  PlotLabel->FormBox["\"South Africa\\nCOVID-19 Deaths\"", TraditionalForm],
+  PlotRange->{{40., 100.}, {All, All}},
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {None, 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{
+  3.7951774710856977`*^9, {3.7951775105193415`*^9, 3.7951775203759484`*^9}, 
+   3.795177627171492*^9, 3.7951776738906097`*^9, 3.7951905662620344`*^9, {
+   3.7953621532039514`*^9, 3.795362180456995*^9}, 3.795958450740402*^9},
+ CellLabel->"Out[4]=",ImageCache->GraphicsData["CompressedBitmap", "\<\
+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\
+\>"],ExpressionUUID->"2bbb600a-f342-48e7-a7af-4c503109d08b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"364058", "/", 
+   RowBox[{"(", 
+    RowBox[{"364058", "+", "1586986"}], ")"}]}], "*", "1000."}]], "Input",
+ CellChangeTimes->{{3.795276376981456*^9, 3.795276435226696*^9}},
+ CellLabel->"In[70]:=",ExpressionUUID->"1ef8f137-d05a-42c9-a96c-3be36c23f988"],
+
+Cell[BoxData["186.59650935601658`"], "Output",
+ CellChangeTimes->{{3.795276430606122*^9, 3.7952764398653307`*^9}},
+ CellLabel->"Out[70]=",ExpressionUUID->"95c6e2bc-d229-40e3-a327-7498f91e067a"]
+}, Open  ]]
+},
+WindowSize->{1058, 601},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1102, 18, 504, "Input",ExpressionUUID->"173a8a47-9291-4280-8372-94afe87ecac3"],
+Cell[CellGroupData[{
+Cell[1685, 42, 297, 5, 28, "Input",ExpressionUUID->"8fece801-ebd2-45fb-8935-af4dfbfb5bd8"],
+Cell[1985, 49, 3254, 98, 128, "Output",ExpressionUUID->"0285b33b-5e64-4f23-8eaf-0abbde179354"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5276, 152, 210, 3, 28, "Input",ExpressionUUID->"ba30b3a1-1141-4407-90bc-3b43ff931a4c"],
+Cell[5489, 157, 198, 3, 32, "Output",ExpressionUUID->"53fb2d36-35a2-4b64-9bd4-37cbef7b2588"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5724, 165, 848, 18, 105, "Input",ExpressionUUID->"ee89e8f3-9767-4689-9958-58e95972ab75"],
+Cell[6575, 185, 6740, 142, 288, 2827, 78, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"2bbb600a-f342-48e7-a7af-4c503109d08b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13352, 332, 286, 6, 28, "Input",ExpressionUUID->"1ef8f137-d05a-42c9-a96c-3be36c23f988"],
+Cell[13641, 340, 193, 2, 32, "Output",ExpressionUUID->"95c6e2bc-d229-40e3-a327-7498f91e067a"]
+}, Open  ]]
+}
+]
+*)
+
