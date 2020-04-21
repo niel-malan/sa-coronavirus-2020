@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    102564,       1765]
-NotebookOptionsPosition[     93221,       1623]
-NotebookOutlinePosition[     94205,       1655]
-CellTagsIndexPosition[     94162,       1652]
+NotebookDataLength[    101946,       1752]
+NotebookOptionsPosition[     92797,       1612]
+NotebookOutlinePosition[     93781,       1644]
+CellTagsIndexPosition[     93738,       1641]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1607,18 +1607,7 @@ implemented consistently, this might be the last pandemic. \
 261b01d25067"]
 }, Open  ]]
 }, Open  ]]
-}, Open  ]],
-
-Cell["Conclusion", "Section",
- CellChangeTimes->{{3.784545640828317*^9, 3.784545646825271*^9}, {
-  3.784894608665481*^9, 3.7848946159839106`*^9}, {3.7855118066531153`*^9, 
-  3.785511815742812*^9}},ExpressionUUID->"f84efae4-08e6-4fde-83ac-\
-0785fe6e6287"],
-
-Cell["Recommendations", "Section",
- CellChangeTimes->{{3.7855120994821634`*^9, 
-  3.7855121085339622`*^9}},ExpressionUUID->"d383fda1-025d-4d0e-a15f-\
-adbb748a8822"]
+}, Open  ]]
 }, Open  ]]
 },
 PrintingStyleEnvironment->"Printout",
@@ -1763,9 +1752,7 @@ Cell[88180, 1539, 2350, 34, 27, "ItemNumbered",ExpressionUUID->"6baccfbc-285b-48
 Cell[90533, 1575, 2212, 31, 27, "ItemNumbered",ExpressionUUID->"6f396c18-c7d8-49ab-b61b-261b01d25067"]
 }, Open  ]]
 }, Open  ]]
-}, Open  ]],
-Cell[92784, 1611, 254, 4, 69, "Section",ExpressionUUID->"f84efae4-08e6-4fde-83ac-0785fe6e6287"],
-Cell[93041, 1617, 164, 3, 55, "Section",ExpressionUUID->"d383fda1-025d-4d0e-a15f-adbb748a8822"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
